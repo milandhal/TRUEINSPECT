@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.venv/
+env/
+venv/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Datasets & Large Archives (3GB CarDD raw images)
+ai/archive*/
+ai/archive*/**
+*.zip
+*.tar.gz
+
+# Build Outputs
+dist/
+build/
+*.egg-info/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+
+# Uploads & Temp
+uploads/
+uploads/*
+!uploads/.gitkeep
+backend/uploads/
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

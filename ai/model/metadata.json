@@ -1,0 +1,26 @@
+{
+  "model_architecture": "fasterrcnn_mobilenet_v3_large_320_fpn",
+  "dataset": "CarDD",
+  "num_classes": 7,
+  "classes": {
+    "0": "Background",
+    "1": "Dent",
+    "2": "Scratch",
+    "3": "Crack",
+    "4": "Glass Damage",
+    "5": "Broken Lamp",
+    "6": "Tire Damage"
+  },
+  "training_samples": 500,
+  "epochs": 6,
+  "best_epoch": 6,
+  "best_loss": 0.42,
+  "augmentation": [
+    "horizontal_flip",
+    "brightness_jitter",
+    "contrast_jitter"
+  ],
+  "optimizer": "SGD+momentum",
+  "lr_scheduler": "CosineAnnealingLR",
+  "trained_at": "2026-09-18T08:30:10Z"
+}
