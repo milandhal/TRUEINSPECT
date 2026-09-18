@@ -2,8 +2,6 @@
 
 **TRUEINSPECT** is an independent, professional full-stack web application for used-car exterior visual inspection, AI-assisted dent & defect detection, severity assessment, configurable MySQL refurbishment cost estimation, and inspection report generation (with downloadable PDF reports).
 
-> **IMPORTANT DISCLAIMER:**  
-> TRUEINSPECT is an independent academic and technical demonstration project. It is **NOT** an official Maruti Suzuki or Maruti Suzuki True Value application. It does not reproduce official logos, trademarks, or proprietary assets, and claims no official affiliation. All refurbishment estimates are project reference benchmarks derived from a configurable MySQL cost master.
 
 ---
 
@@ -153,16 +151,4 @@ python app.py
 
 ---
 
-## 5. Technical Honesty & Interview Talking Points
 
-For academic evaluation and MSIL interview panels:
-1. **Separation of Concerns**:
-   - **Computer Vision**: Detects damage and bounds the region of interest.
-   - **Relational Database**: Source of truth for configurable repair-cost rules (`repair_cost_master`).
-   - **Backend Engine**: Deterministic estimation, historical estimate snapshotting (`inspection_estimates`), and rule-based condition grading.
-   - **User Interface**: Clear, uncluttered automotive workflow with real camera integration.
-2. **Zero Fake Detections**:
-   - The application starts with an empty database. All statistics come from real SQL queries.
-   - Never fabricates confidence numbers; confidence is `NULL` for manual entries and strictly extracted from model outputs when connected.
-3. **No Hardcoded Costs**:
-   - Refurbishment calculations strictly query `repair_cost_master`. Managers can configure minimum and maximum costs directly from `/settings`.
